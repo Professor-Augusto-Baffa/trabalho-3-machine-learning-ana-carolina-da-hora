@@ -7,11 +7,14 @@
 		<node id="3" name="Distributions" qualified_name="Orange.widgets.visualize.owdistributions.OWDistributions" project_name="Orange3" version="" title="Distributions" position="(155.0, 479.0)" />
 		<node id="4" name="PCA" qualified_name="Orange.widgets.unsupervised.owpca.OWPCA" project_name="Orange3" version="" title="PCA (1)" position="(302.0, 335.0)" />
 		<node id="5" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table (1)" position="(484.0, 212.0)" />
-		<node id="6" name="Test and Score" qualified_name="Orange.widgets.evaluate.owtestandscore.OWTestAndScore" project_name="Orange3" version="" title="Test and Score" position="(749.0, 344.0)" />
+		<node id="6" name="Test and Score" qualified_name="Orange.widgets.evaluate.owtestandscore.OWTestAndScore" project_name="Orange3" version="" title="Test and Score" position="(804.0, 349.0)" />
 		<node id="7" name="Feature Statistics" qualified_name="Orange.widgets.data.owfeaturestatistics.OWFeatureStatistics" project_name="Orange3" version="" title="Feature Statistics" position="(264.0, 544.0)" />
-		<node id="8" name="Data Sampler" qualified_name="Orange.widgets.data.owdatasampler.OWDataSampler" project_name="Orange3" version="" title="Data Sampler" position="(507.0, 355.0)" />
+		<node id="8" name="Data Sampler" qualified_name="Orange.widgets.data.owdatasampler.OWDataSampler" project_name="Orange3" version="" title="Data Sampler" position="(453.0, 351.0)" />
 		<node id="9" name="MDS" qualified_name="Orange.widgets.unsupervised.owmds.OWMDS" project_name="Orange3" version="" title="MDS" position="(516.0, 591.0)" />
-		<node id="10" name="Neural Network" qualified_name="Orange.widgets.model.owneuralnetwork.OWNNLearner" project_name="Orange3" version="" title="Neural Network" position="(736.0, 164.0)" />
+		<node id="10" name="Neural Network" qualified_name="Orange.widgets.model.owneuralnetwork.OWNNLearner" project_name="Orange3" version="" title="Neural Network" position="(635.0, 124.0)" />
+		<node id="11" name="Logistic Regression" qualified_name="Orange.widgets.model.owlogisticregression.OWLogisticRegression" project_name="Orange3" version="" title="Logistic Regression" position="(805.0, 131.0)" />
+		<node id="12" name="Tree" qualified_name="Orange.widgets.model.owtree.OWTreeLearner" project_name="Orange3" version="" title="Tree" position="(629.0, 480.0)" />
+		<node id="13" name="SVM" qualified_name="Orange.widgets.model.owsvm.OWSVM" project_name="Orange3" version="" title="SVM" position="(743.0, 553.0)" />
 	</nodes>
 	<links>
 		<link id="0" source_node_id="2" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" />
@@ -26,6 +29,9 @@
 		<link id="9" source_node_id="4" sink_node_id="8" source_channel="Data" sink_channel="Data" enabled="true" />
 		<link id="10" source_node_id="8" sink_node_id="9" source_channel="Data Sample" sink_channel="Data Subset" enabled="true" />
 		<link id="11" source_node_id="10" sink_node_id="6" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="12" source_node_id="11" sink_node_id="6" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="13" source_node_id="12" sink_node_id="6" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="14" source_node_id="13" sink_node_id="6" source_channel="Learner" sink_channel="Learner" enabled="true" />
 	</links>
 	<annotations />
 	<thumbnail />
@@ -180,7 +186,7 @@ SwJoL0sCaDRLAmgwSwJ1aDJ9lGgxSwFzdWJldS4=
 		<properties node_id="6" format="pickle">gASVRjQAAAAAAAB9lCiMFGNvbXBhcmlzb25fY3JpdGVyaW9ulEsAjBJjb250cm9sQXJlYVZpc2li
 bGWUiIwNY3Zfc3RyYXRpZmllZJSIjAduX2ZvbGRzlEsCjAluX3JlcGVhdHOUSwOMCnJlc2FtcGxp
 bmeUSwWMBHJvcGWURz+5mZmZmZmajAtzYW1wbGVfc2l6ZZRLCYwTc2F2ZWRXaWRnZXRHZW9tZXRy
-eZRDMgHZ0MsAAgAAAAAF1gAAAB8AAAjhAAACawAABdYAAABEAAAI4QAAAmsAAAABAAAAAAVWlIwS
+eZRDMgHZ0MsAAgAAAAAF1gAAAAAAAAjhAAACTAAABdYAAAAlAAAI4QAAAkwAAAABAAAAAAVWlIwS
 c2h1ZmZsZV9zdHJhdGlmaWVklIiMCHVzZV9yb3BllImMC3Njb3JlX3RhYmxllH2UjAxzaG93bl9z
 Y29yZXOUj5QojAJDQZSMCVByZWNpc2lvbpSMA01TRZSMBFJNU0WUjANNQUWUjANBVUOUjAJSMpSM
 BlJlY2FsbJSMAkYxlJBzjAtfX3ZlcnNpb25fX5RLA4wQY29udGV4dF9zZXR0aW5nc5RdlCiMFW9y
@@ -500,6 +506,9 @@ hpRoJWgmS2aGlGgJfZRoE0sDdWgpfZQoaCtLAmgsSwJoLUsCaC5LAWgvSwJoMEsCaDFLAmgySwJo
 M0sCaDRLAmg1SwJoNksCaDdLAmg4SwJoOUsCaCZLAmg6SwJoI0sBdWg7fZRoHksCc3ViZXUu
 </properties>
 		<properties node_id="10" format="literal">{'activation_index': 3, 'alpha_index': 0, 'auto_apply': True, 'controlAreaVisible': True, 'hidden_layers_input': '100,', 'learner_name': 'Neural Network', 'max_iterations': 200, 'replicable': True, 'savedWidgetGeometry': None, 'solver_index': 2, '__version__': 1}</properties>
+		<properties node_id="11" format="literal">{'C_index': 61, 'auto_apply': True, 'controlAreaVisible': True, 'learner_name': '', 'penalty_type': 1, 'savedWidgetGeometry': None, '__version__': 1}</properties>
+		<properties node_id="12" format="literal">{'auto_apply': True, 'binary_trees': True, 'controlAreaVisible': True, 'learner_name': '', 'limit_depth': True, 'limit_majority': True, 'limit_min_internal': True, 'limit_min_leaf': True, 'max_depth': 100, 'min_internal': 5, 'min_leaf': 2, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x07D\x00\x00\x00X\x00\x00\x08\xaa\x00\x00\x01\xde\x00\x00\x07D\x00\x00\x00X\x00\x00\x08\xaa\x00\x00\x01\xde\x00\x00\x00\x01\x00\x00\x00\x00\x05V', 'sufficient_majority': 95, '__version__': 1}</properties>
+		<properties node_id="13" format="literal">{'C': 1.0, 'auto_apply': True, 'coef0': 0.0, 'controlAreaVisible': True, 'degree': 3, 'epsilon': 0.1, 'gamma': 0.0, 'kernel_type': 2, 'learner_name': '', 'limit_iter': True, 'max_iter': 100, 'nu': 0.5, 'nu_C': 1.0, 'savedWidgetGeometry': None, 'svm_type': 0, 'tol': 0.001, '__version__': 1}</properties>
 	</node_properties>
 	<session_state>
 		<window_groups />
